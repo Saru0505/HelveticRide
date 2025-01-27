@@ -1,4 +1,4 @@
-# **HelveticRides**
+# **HelveticRide**
 
 ## **Projektübersicht**
 Helvetic Rides ist eine App, mit der Motorradfahrer ihre Touren planen und teilen können. Benutzer können eigene Routen erstellen und andere dazu einladen. Außerdem gibt es eine Google Maps-Integration, die es ermöglicht, die Routen direkt auf einer Karte anzuzeigen.
