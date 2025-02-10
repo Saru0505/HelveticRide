@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps Route</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLzVfKcIpz8Dk5XD1PVgM1RJnq6CpQ0Gk&libraries=places"></script>
+  <script>let map;
+    let directionsService;
+    let directionsRenderer;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 48.137154, lng: 11.576124 }, // Standard: München
+        zoom: 6
+      });
+      directionsService = new google.maps.DirectionsService();
+      directionsRenderer = new google.maps.DirectionsRenderer();
+      directionsRenderer.setMap(map);
+    }
+
+    function calculateRoute(start, stop, waypoints) {
+      let waypointArray = waypoints ? waypoints.split(',').map(w => ({ location: w.trim(), stopover: true })) : [];
+      let request = {
+        origin: start,
+        destination: stop,
+        waypoints: waypointArray,
+        travelMode: google.maps.TravelMode.DRIVING
+      };
+      directionsService.route(request, function (result, status) {
+        if (status === google.maps.DirectionsStatus.OK) {
+          directionsRenderer.setDirections(result);
+        } else {
+          alert('Route konnte nicht berechnet werden: ' + status);
+        }
+      });
+    }</script>
+</head>
+<body onload="initMap()">
+  <div id="map" style="width: 100%; height: 100vh;"></div>
+</body>
+</html>

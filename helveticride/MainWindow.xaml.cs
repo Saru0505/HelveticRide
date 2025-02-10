@@ -1,13 +1,8 @@
-﻿using System.Text;
+﻿using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Microsoft.Web.WebView2.Core;
+using Microsoft.Web.WebView2.Wpf;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace helveticride
 {
@@ -19,6 +14,18 @@ namespace helveticride
     public MainWindow()
     {
       InitializeComponent();
+      InitializeWebView();
     }
+
+    private async void InitializeWebView()
+    {
+      await webView.EnsureCoreWebView2Async();
+      string relativePath = "map.html";
+      string projectDirectory = AppDomain.CurrentDomain.BaseDirectory;
+      string fullPath = System.IO.Path.Combine(projectDirectory, relativePath);
+      webView.Source = new Uri("file:///" + fullPath);
+    }
+
+
   }
 }
