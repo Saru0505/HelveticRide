@@ -89,7 +89,6 @@ C:\Users\saruj\Documents\helveticride\helveticride\bin\Debug\net8.0-windows\Micr
 C:\Users\saruj\Documents\helveticride\helveticride\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.xml
 C:\Users\saruj\Documents\helveticride\helveticride\bin\Debug\net8.0-windows\SQLite-net.dll
 C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\HomeWindow.g.cs
-C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\helveticride_MarkupCompile.lref
 C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\HomeWindow.baml
 C:\Users\saruj\Documents\helveticride\helveticride\bin\Debug\net8.0-windows\EntityFramework.SqlServer.dll
 C:\Users\saruj\Documents\helveticride\helveticride\bin\Debug\net8.0-windows\EntityFramework.dll

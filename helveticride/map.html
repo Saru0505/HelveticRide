@@ -6,139 +6,118 @@
   <title>Google Maps Route</title>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY_YrWCoDtro9Ms4DuB04AueAyrQWibE8&libraries=places"></script>
   <style>
-    /* Grundlegendes Layout */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Grundlayout */
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #1a1a1f;
-      overflow: hidden;
+      display: flex;
     }
 
-    #map {
-      position: absolute;
-      top: 0;
-      left: 320px; /* Platz für das linke Control Panel */
-      width: calc(100% - 320px);
+    /* Die Sidebar links */
+    .sidebar {
+      width: 350px;
       height: 100vh;
-    }
-
-    .controls.dark {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 320px;
-      background: rgba(24, 24, 28, 0.92); /* dunkles anthrazit */
-      padding: 30px 20px;
-      box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(6px);
-      z-index: 10;
+      background: #0c0c18; /* Dunkles Blau/Schwarz */
+      color: white;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      justify-content: start;
     }
 
-      .controls.dark h2 {
-        color: #E0E0E0;
+      /* Titel oben */
+      .sidebar h2 {
         font-size: 24px;
         margin-bottom: 10px;
-        border-bottom: 1px solid #444;
-        padding-bottom: 10px;
+        color: #c6a0f6; /* Violett */
       }
 
-    .input-group {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-      .input-group label {
-        color: #BBB;
-        font-weight: 500;
+      /* Kleine Labels */
+      .sidebar label {
         font-size: 14px;
+        color: #aaa;
       }
 
-      .input-group input {
+      /* Eingabefelder */
+      .sidebar input {
+        width: 100%;
         padding: 10px;
-        font-size: 14px;
+        margin: 5px 0 15px;
+        border-radius: 5px;
         border: none;
-        border-radius: 8px;
-        background: #2E2E36;
-        color: #EEE;
-        transition: 0.3s;
-      }
-
-        .input-group input::placeholder {
-          color: #888;
-        }
-
-        .input-group input:focus {
-          outline: none;
-          box-shadow: 0 0 0 2px #9b59b6;
-        }
-
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: auto;
-    }
-
-      .button-group button {
-        padding: 10px;
-        border: none;
-        border-radius: 8px;
-        background-color: #9b59b6;
+        background: #1a1a2e;
         color: white;
-        font-weight: bold;
-        cursor: pointer;
-        transition: 0.2s;
       }
 
-        .button-group button:hover {
-          background-color: #8e44ad;
-        }
+      /* Buttons */
+      .sidebar button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
 
-        .button-group button:disabled {
-          background-color: #555;
-          cursor: not-allowed;
-        }
+    .button-primary {
+      background: #7f5af0; /* Lila */
+      color: white;
+    }
+
+      .button-primary:hover {
+        background: #5d3cbf;
+      }
+
+    .button-secondary {
+      background: #222;
+      color: white;
+    }
+
+      .button-secondary:hover {
+        background: #333;
+      }
+
+    /* Route-Übersicht */
+    .route-details {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Karte */
+    #map {
+      flex-grow: 1;
+      height: 100vh;
+    }
   </style>
 
 </head>
 <body onload="initMap()">
-  <div id="map"></div>
+  <div class="sidebar">
+    <h2>Your Journey</h2>
 
-  <!-- Steuerelemente, die oben rechts auf der Karte angezeigt werden -->
-  <div class="controls dark">
-    <h2>Route Planen</h2>
-
-    <div class="input-group">
-      <label for="start">Startpunkt</label>
-      <input type="text" id="start" placeholder="z. B. Zürich">
+    <div class="route-details">
+      <p><strong>From:</strong> <span id="routeStart">---</span></p>
+      <p><strong>To:</strong> <span id="routeEnd">---</span></p>
+      <p>🕒 <span id="duration">0 min</span> | 📏 <span id="distance">0 km</span></p>
     </div>
 
-    <div class="input-group">
-      <label for="end">Zielpunkt</label>
-      <input type="text" id="end" placeholder="z. B. Genf">
-    </div>
+    <label for="start">Start</label>
+    <input type="text" id="start" placeholder="Geben Sie den Startpunkt ein">
 
-    <div class="input-group">
-      <label for="waypoints">Zwischenstopps</label>
-      <input type="text" id="waypoints" placeholder="z. B. Basel, Luzern">
-    </div>
+    <label for="waypoints">Stop One (optional)</label>
+    <input type="text" id="waypoints" placeholder="Stop hinzufügen">
 
-    <div class="button-group">
-      <button onclick="calculateRoute()">Route Berechnen</button>
-      <button onclick="saveRoute()">Route Speichern</button>
-    </div>
+    <label for="end">End</label>
+    <input type="text" id="end" placeholder="Geben Sie das Ziel ein">
+
+    <button class="button-primary" onclick="calculateRoute()">Route Berechnen</button>
+    <button class="button-secondary" onclick="saveRoute()">Route Speichern</button>
   </div>
 
+  <div id="map"></div>
 
   <script>
     let map;
@@ -159,6 +138,7 @@
         types: ["geocode"]
       });
     }
+
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 48.137154, lng: 11.576124 }, // München als Standard
@@ -193,6 +173,16 @@
       directionsService.route(request, function (result, status) {
         if (status === google.maps.DirectionsStatus.OK) {
           directionsRenderer.setDirections(result);
+
+          // Extrahiere die Dauer und Distanz
+          let duration = result.routes[0].legs[0].duration.text;
+          let distance = result.routes[0].legs[0].distance.text;
+
+          // Zeige die Werte in der Sidebar an
+          document.getElementById("routeStart").innerText = start;
+          document.getElementById("routeEnd").innerText = end;
+          document.getElementById("duration").innerText = duration;
+          document.getElementById("distance").innerText = distance;
         } else {
           alert('Route konnte nicht berechnet werden: ' + status);
         }
@@ -225,7 +215,6 @@
         alert("WebView2 nicht verfügbar!");
       }
     }
-
 
     // Optional: Funktion um die gespeicherten Routen zu laden (falls du eine Anzeige in HTML haben möchtest)
     function loadRoutes(routes) {
