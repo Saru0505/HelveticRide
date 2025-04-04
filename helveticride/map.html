@@ -6,92 +6,159 @@
   <title>Google Maps Route</title>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY_YrWCoDtro9Ms4DuB04AueAyrQWibE8&libraries=places"></script>
   <style>
-    /* Grundlegendes Layout für die Karte */
-    body {
+    /* Grundlegendes Layout */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
+      background-color: #1a1a1f;
+      overflow: hidden;
     }
 
     #map {
-      width: 100%;
-      height: 100vh; /* Die Karte nimmt die volle Höhe des Bildschirms ein */
-    }
-
-    /* Das Steuerungselement wird oben rechts fixiert */
-    .controls {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-      width: 250px; /* Breite der Steuerelemente */
-      z-index: 5;
+      top: 0;
+      left: 320px; /* Platz für das linke Control Panel */
+      width: calc(100% - 320px);
+      height: 100vh;
     }
 
-      .controls h2 {
-        font-size: 20px;
-        margin-bottom: 15px;
-        color: #333;
-        font-weight: bold;
+    .controls.dark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 320px;
+      background: rgba(24, 24, 28, 0.92); /* dunkles anthrazit */
+      padding: 30px 20px;
+      box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+      .controls.dark h2 {
+        color: #E0E0E0;
+        font-size: 24px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #444;
+        padding-bottom: 10px;
       }
 
-      .controls input,
-      .controls button {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-      }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
 
-      .controls input {
+      .input-group label {
+        color: #BBB;
+        font-weight: 500;
         font-size: 14px;
       }
 
-      .controls button {
-        background-color: #4CAF50;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
+      .input-group input {
+        padding: 10px;
+        font-size: 14px;
         border: none;
+        border-radius: 8px;
+        background: #2E2E36;
+        color: #EEE;
+        transition: 0.3s;
       }
 
-        .controls button:hover {
-          background-color: #45a049;
+        .input-group input::placeholder {
+          color: #888;
         }
 
-        .controls button:disabled {
-          background-color: #ccc;
+        .input-group input:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px #9b59b6;
+        }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+      .button-group button {
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: #9b59b6;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+        .button-group button:hover {
+          background-color: #8e44ad;
+        }
+
+        .button-group button:disabled {
+          background-color: #555;
           cursor: not-allowed;
         }
   </style>
+
 </head>
 <body onload="initMap()">
   <div id="map"></div>
 
   <!-- Steuerelemente, die oben rechts auf der Karte angezeigt werden -->
-  <div class="controls">
+  <div class="controls dark">
     <h2>Route Planen</h2>
-    <label for="start">Startpunkt:</label>
-    <input type="text" id="start" placeholder="Geben Sie den Startpunkt ein">
 
-    <label for="end">Zielpunkt:</label>
-    <input type="text" id="end" placeholder="Geben Sie den Zielpunkt ein">
+    <div class="input-group">
+      <label for="start">Startpunkt</label>
+      <input type="text" id="start" placeholder="z. B. Zürich">
+    </div>
 
-    <label for="waypoints">Waypoints (optional, durch Kommas getrennt):</label>
-    <input type="text" id="waypoints" placeholder="z.B. Nürnberg, Leipzig">
+    <div class="input-group">
+      <label for="end">Zielpunkt</label>
+      <input type="text" id="end" placeholder="z. B. Genf">
+    </div>
 
-    <button onclick="calculateRoute()">Route Berechnen</button>
-    <button onclick="saveRoute()">Route Speichern</button>
+    <div class="input-group">
+      <label for="waypoints">Zwischenstopps</label>
+      <input type="text" id="waypoints" placeholder="z. B. Basel, Luzern">
+    </div>
+
+    <div class="button-group">
+      <button onclick="calculateRoute()">Route Berechnen</button>
+      <button onclick="saveRoute()">Route Speichern</button>
+    </div>
   </div>
+
 
   <script>
     let map;
     let directionsService;
     let directionsRenderer;
+    let autocompleteStart;
+    let autocompleteEnd;
 
+    function initAutocomplete() {
+      const startInput = document.getElementById("start");
+      const endInput = document.getElementById("end");
+
+      autocompleteStart = new google.maps.places.Autocomplete(startInput, {
+        types: ["geocode"]
+      });
+
+      autocompleteEnd = new google.maps.places.Autocomplete(endInput, {
+        types: ["geocode"]
+      });
+    }
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 48.137154, lng: 11.576124 }, // München als Standard
@@ -100,6 +167,8 @@
       directionsService = new google.maps.DirectionsService();
       directionsRenderer = new google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
+
+      initAutocomplete()
     }
 
     function calculateRoute() {
