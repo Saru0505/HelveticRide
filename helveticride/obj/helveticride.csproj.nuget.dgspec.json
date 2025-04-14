@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\helveticride.csproj": {}
+    "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\helveticride.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\helveticride.csproj": {
+    "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\helveticride.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\helveticride.csproj",
+        "projectUniqueName": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\helveticride.csproj",
         "projectName": "helveticride",
-        "projectPath": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\helveticride.csproj",
+        "projectPath": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\helveticride.csproj",
         "packagesPath": "C:\\Users\\saruj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\obj\\",
+        "outputPath": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\saruj\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -50,11 +50,10 @@ namespace helveticride
       try
       {
         string message = e.TryGetWebMessageAsString();
-
-        // Debug: Zeige die empfangene Nachricht an
         MessageBox.Show("Empfangene Nachricht:\n" + message);
 
         dynamic json = JsonConvert.DeserializeObject(message);
+
 
         if (json?.type == "saveRoute")
         {
@@ -68,11 +67,8 @@ namespace helveticride
             return;
           }
 
-          // Speichere Route in der Datenbank
           _database.SaveRoute(start, end, waypoints);
           MessageBox.Show("Route erfolgreich gespeichert.");
-
-
         }
         else
         {
@@ -84,5 +80,41 @@ namespace helveticride
         MessageBox.Show("Fehler beim Verarbeiten der Nachricht:\n" + ex.Message);
       }
     }
+
+    private void Home_Click(object sender, RoutedEventArgs e)
+    {
+      var window = new HomeWindow();
+      window.Show();
+      this.Close();
+    }
+
+    private void Map_Click(object sender, RoutedEventArgs e)
+    {
+      // Du bist bereits in MainWindow – ggf. Seite neu laden
+      webView.Reload();
+    }
+
+    private void Routes_Click(object sender, RoutedEventArgs e)
+    {
+      var window = new RoutesWindow();
+      window.Show();
+      this.Close();
+    }
+
+    private void Settings_Click(object sender, RoutedEventArgs e)
+    {
+      var window = new SettingsWindow();
+      window.Show();
+      this.Close();
+    }
+
+    private void Help_Click(object sender, RoutedEventArgs e)
+    {
+      var window = new HelpWindow();
+      window.Show();
+      this.Close();
+    }
+
+
   }
 }

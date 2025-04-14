@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\",
+  "WorkspaceRootPath": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -15,32 +15,52 @@
       "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:map.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\obj\\Debug\\net8.0-windows\\HomeWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0-windows\\HomeWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\helpwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:helpwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\homewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:homewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\routeswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:routeswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\routeswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:routeswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\obj\\Debug\\net8.0-windows\\HomeWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0-windows\\HomeWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\sqlitehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:sqlitehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:route.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -60,11 +80,11 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "map.html",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\map.html",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\map.html",
               "RelativeDocumentMoniker": "map.html",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\map.html",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\map.html",
               "RelativeToolTip": "map.html",
-              "ViewState": "AQIAAMUAAAAAAAAAAAAAwNAAAAA5AAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAOYAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-04-04T04:08:53.201Z",
               "IsPinned": true,
@@ -74,9 +94,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-03T09:25:40.51Z",
@@ -84,13 +104,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\HomeWindow.xaml.cs",
+              "RelativeDocumentMoniker": "HomeWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\HomeWindow.xaml.cs",
+              "RelativeToolTip": "HomeWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T09:20:26.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAwwFgAAAAAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAvwDcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T09:25:35.59Z",
               "EditorCaption": ""
@@ -98,22 +131,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "HelpWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\HelpWindow.xaml",
+              "RelativeDocumentMoniker": "HelpWindow.xaml",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\HelpWindow.xaml",
+              "RelativeToolTip": "HelpWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-14T09:05:17.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RoutesWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\RoutesWindow.xaml",
+              "RelativeDocumentMoniker": "RoutesWindow.xaml",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\RoutesWindow.xaml",
+              "RelativeToolTip": "RoutesWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-14T09:06:22.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoutesWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\RoutesWindow.xaml.cs",
+              "RelativeDocumentMoniker": "RoutesWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\RoutesWindow.xaml.cs",
+              "RelativeToolTip": "RoutesWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T09:07:25.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SettingsWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\SettingsWindow.xaml",
+              "RelativeDocumentMoniker": "SettingsWindow.xaml",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\SettingsWindow.xaml",
+              "RelativeToolTip": "SettingsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-14T09:04:55.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T08:33:37.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\App.xaml",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\App.xaml",
               "RelativeToolTip": "App.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-03T19:53:32.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Route.cs",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\Route.cs",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\Route.cs",
               "RelativeDocumentMoniker": "Route.cs",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\Route.cs",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\Route.cs",
               "RelativeToolTip": "Route.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -121,11 +216,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "SQLiteHelper.cs",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\SQLiteHelper.cs",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\SQLiteHelper.cs",
               "RelativeDocumentMoniker": "SQLiteHelper.cs",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\SQLiteHelper.cs",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\SQLiteHelper.cs",
               "RelativeToolTip": "SQLiteHelper.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAAkwC8AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -133,11 +228,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\Database.cs",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\Database.cs",
               "RelativeDocumentMoniker": "Database.cs",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\Database.cs",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\Database.cs",
               "RelativeToolTip": "Database.cs",
               "ViewState": "AQIAAC8AAAAAAAAAAAAgwDcAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -145,34 +240,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "HomeWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\HomeWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\HomeWindow.xaml",
               "RelativeDocumentMoniker": "HomeWindow.xaml",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\HomeWindow.xaml",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\HomeWindow.xaml",
               "RelativeToolTip": "HomeWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-04T09:19:48.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HomeWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\HomeWindow.xaml.cs",
-              "RelativeDocumentMoniker": "HomeWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\HomeWindow.xaml.cs",
-              "RelativeToolTip": "HomeWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T09:20:26.367Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "HomeWindow.g.cs",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\obj\\Debug\\net8.0-windows\\HomeWindow.g.cs",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\obj\\Debug\\net8.0-windows\\HomeWindow.g.cs",
               "RelativeDocumentMoniker": "obj\\Debug\\net8.0-windows\\HomeWindow.g.cs",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\obj\\Debug\\net8.0-windows\\HomeWindow.g.cs",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\obj\\Debug\\net8.0-windows\\HomeWindow.g.cs",
               "RelativeToolTip": "obj\\Debug\\net8.0-windows\\HomeWindow.g.cs",
               "ViewState": "AQIAACYAAAAAAAAAAAAUwC0AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -180,11 +263,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\AssemblyInfo.cs",
               "RelativeToolTip": "AssemblyInfo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

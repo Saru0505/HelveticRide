@@ -2,22 +2,27 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:wv="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
-        Title="Helveticride" Height="450" Width="800"
+        Title="Helveticride" Height="500" Width="800"
         Background="#f3f4f6">
 
   <Grid>
-    <!-- Grid mit zwei Zeilen: eine für die Karte und eine für die Steuerelemente -->
     <Grid.RowDefinitions>
       <RowDefinition Height="*" />
-      <!-- Kartenbereich (nimmt den meisten Platz ein) -->
-      <RowDefinition Height="Auto" />
-      <!-- Steuerelemente (wird automatisch der Größe angepasst) -->
+      <RowDefinition Height="60" />
     </Grid.RowDefinitions>
 
-    <!-- WebView2 für Google Maps in der ersten Zeile -->
+    <!-- WebView2 takes top area only -->
     <wv:WebView2 Name="webView" Grid.Row="0" />
 
-    <!-- UI-Steuerelemente (TextBoxen und Button) in der zweiten Zeile -->
+    <!-- Navbar placed below -->
+    <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#0c0c18"
+              HorizontalAlignment="Center">
+      <Button Content="🏠 Home" Width="100" Margin="5" Click="Home_Click" />
+      <Button Content="🗺 Karte" Width="100" Margin="5" Click="Map_Click" />
+      <Button Content="💾 Routen" Width="100" Margin="5" Click="Routes_Click" />
+      <Button Content="⚙ Einstellungen" Width="100" Margin="5" Click="Settings_Click" />
+      <Button Content="❓ Hilfe" Width="100" Margin="5" Click="Help_Click" />
+    </StackPanel>
   </Grid>
 
 </Window>
