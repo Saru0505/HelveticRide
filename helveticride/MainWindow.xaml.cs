@@ -1,4 +1,5 @@
 ﻿using Microsoft.Web.WebView2.Core;
+using Microsoft.Web.WebView2.WinForms;
 using Microsoft.Web.WebView2.Wpf;
 using Newtonsoft.Json;
 using System;
@@ -10,12 +11,18 @@ namespace helveticride
   public partial class MainWindow : Window
   {
     private Database _database;
+    private Route _loadedRoute;
 
     public MainWindow()
     {
       InitializeComponent();
       _database = new Database();
       InitializeWebView();
+    }
+
+    public MainWindow(Route route) : this()
+    {
+      _loadedRoute = route;
     }
 
     private async void InitializeWebView()
@@ -33,11 +40,32 @@ namespace helveticride
         }
 
         webView.CoreWebView2.WebMessageReceived += WebView_WebMessageReceived;
+
+        // Falls Route übergeben wurde → anzeigen
+        if (_loadedRoute != null)
+        {
+          webView.CoreWebView2.NavigationCompleted += (s, e) =>
+          {
+            string script = $@"
+              showRouteFromDatabase(
+                '{EscapeJs(_loadedRoute.Start)}',
+                '{EscapeJs(_loadedRoute.End)}',
+                '{EscapeJs(_loadedRoute.Waypoints)}'
+              );
+            ";
+            webView.CoreWebView2.ExecuteScriptAsync(script);
+          };
+        }
       }
       catch (Exception ex)
       {
         MessageBox.Show("Fehler beim Initialisieren von WebView2: " + ex.Message);
       }
+    }
+
+    private string EscapeJs(string input)
+    {
+      return input.Replace("\\", "\\\\").Replace("'", "\\'").Replace("\"", "\\\"");
     }
 
     private void WebView_WebMessageReceived(object sender, CoreWebView2WebMessageReceivedEventArgs e)

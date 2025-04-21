@@ -245,6 +245,28 @@
         window.chrome.webview.postMessage(JSON.stringify({ type: "navigate", target }));
       }
     }
+
+    function showRouteFromDatabase(start, end, waypointsString) {
+      let waypoints = [];
+      if (waypointsString && waypointsString.trim() !== "") {
+        waypoints = waypointsString.split(';').map(p => ({ location: p.trim() }));
+      }
+
+      const request = {
+        origin: start,
+        destination: end,
+        waypoints: waypoints,
+        travelMode: 'DRIVING'
+      };
+
+      directionsService.route(request, function (result, status) {
+        if (status === 'OK') {
+          directionsRenderer.setDirections(result);
+        } else {
+          alert('Fehler beim Anzeigen der Route: ' + status);
+        }
+      });
+    }
   </script>
 </body>
 </html>

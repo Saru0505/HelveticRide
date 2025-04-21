@@ -1,5 +1,5 @@
 ﻿using SQLite;
-
+/*
 namespace helveticride
 {
   public class Route
@@ -11,3 +11,4 @@ namespace helveticride
     public string Waypoints { get; set; }
   }
 }
+*/

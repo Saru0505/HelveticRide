@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rGWN9WK0s7bJpY0A6qLIEDL192XCNcYruu9w3sD3qO+iY2Mf+aX0Oc9SQtqnCQTRXfGMaMgtktPqTl9vwRjqJw==",
+  "dgSpecHash": "KyKri2YPvLKWCPDrcpzDEh1/JmwflYl0zGcoDAfF3Tf2+ZoylUaL2GF2fTMAd19gO8cxIvs0HFEOer1zlicAZw==",
   "success": true,
   "projectFilePath": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\helveticride.csproj",
   "expectedPackageFiles": [
@@ -40,7 +40,7 @@
     "C:\\Users\\saruj\\.nuget\\packages\\microsoft.net.http.headers\\2.3.0\\microsoft.net.http.headers.2.3.0.nupkg.sha512",
     "C:\\Users\\saruj\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\saruj\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
-    "C:\\Users\\saruj\\.nuget\\packages\\microsoft.web.webview2\\1.0.3124.44\\microsoft.web.webview2.1.0.3124.44.nupkg.sha512",
+    "C:\\Users\\saruj\\.nuget\\packages\\microsoft.web.webview2\\1.0.3179.45\\microsoft.web.webview2.1.0.3179.45.nupkg.sha512",
     "C:\\Users\\saruj\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\saruj\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\saruj\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",

@@ -1,13 +1,12 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media;
 
 namespace helveticride
 {
   public partial class RoutesWindow : Window
   {
     private Database _database;
+    private List<Route> _routeList;
 
     public RoutesWindow()
     {
@@ -18,8 +17,23 @@ namespace helveticride
 
     private void LoadRoutes()
     {
-      string routes = _database.GetAllRoutes();
-      RoutesTextBox.Text = routes;
+      _routeList = _database.GetRouteList();
+      RoutesList.ItemsSource = _routeList;
+    }
+
+    private void ShowRoute_Click(object sender, RoutedEventArgs e)
+    {
+      var selectedRoute = (Route)RoutesList.SelectedItem;
+      if (selectedRoute != null)
+      {
+        var mainWindow = new MainWindow(selectedRoute);
+        mainWindow.Show();
+        this.Close();
+      }
+      else
+      {
+        MessageBox.Show("Bitte wähle eine Route aus.");
+      }
     }
 
     private void BackButton_Click(object sender, RoutedEventArgs e)

@@ -630,7 +630,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Web.WebView2/1.0.3124.44": {
+      "Microsoft.Web.WebView2/1.0.3179.45": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Web.WebView2.targets": {}
@@ -2630,10 +2630,10 @@
         "runtime.json"
       ]
     },
-    "Microsoft.Web.WebView2/1.0.3124.44": {
-      "sha512": "sQb+ACD3ILvHxztxqCWLbhYmFNf5dH0HPhVKFYg020rpeQPkadH0nkVOSsgfSyBDMLypI9iMBeD6uVcVxsKLkg==",
+    "Microsoft.Web.WebView2/1.0.3179.45": {
+      "sha512": "3pokSH5CnN0G6rGhGFo1y87inxYhNxBQ2Vdf0wlvBj99KHxQJormjDACmqRnFeUsmuNFIhWwfAL1ztq7wD5qRA==",
       "type": "package",
-      "path": "microsoft.web.webview2/1.0.3124.44",
+      "path": "microsoft.web.webview2/1.0.3179.45",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -2679,7 +2679,7 @@
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.xml",
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
         "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.xml",
-        "microsoft.web.webview2.1.0.3124.44.nupkg.sha512",
+        "microsoft.web.webview2.1.0.3179.45.nupkg.sha512",
         "microsoft.web.webview2.nuspec",
         "runtimes/win-arm64/native/WebView2Loader.dll",
         "runtimes/win-arm64/native_uap/Microsoft.Web.WebView2.Core.dll",
@@ -5747,7 +5747,7 @@
       "Microsoft.AspNetCore.Mvc.Core >= 2.3.0",
       "Microsoft.Data.Sqlite >= 9.0.1",
       "Microsoft.Maps.MapControl.WPF >= 1.0.0.3",
-      "Microsoft.Web.WebView2 >= 1.0.3124.44",
+      "Microsoft.Web.WebView2 >= 1.0.3179.45",
       "SQLite-net-pcl >= 1.9.172",
       "System.Data.SQLite >= 1.0.119"
     ]
@@ -5810,7 +5810,7 @@
           },
           "Microsoft.Web.WebView2": {
             "target": "Package",
-            "version": "[1.0.3124.44, )"
+            "version": "[1.0.3179.45, )"
           },
           "SQLite-net-pcl": {
             "target": "Package",

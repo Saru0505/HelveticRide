@@ -59,7 +59,7 @@
             },
             "Microsoft.Web.WebView2": {
               "target": "Package",
-              "version": "[1.0.3124.44, )"
+              "version": "[1.0.3179.45, )"
             },
             "SQLite-net-pcl": {
               "target": "Package",

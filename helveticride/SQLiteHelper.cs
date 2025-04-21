@@ -72,5 +72,46 @@ namespace helveticride
       }
       return result;
     }
+
+    public class Route
+    {
+      public int Id { get; set; }
+      public string Start { get; set; }
+      public string End { get; set; }
+      public string Waypoints { get; set; }
+
+      public override string ToString()
+      {
+        return $"Start: {Start}, End: {End}, Waypoints: {Waypoints}";
+      }
+    }
+
+    public List<Route> GetRouteList()
+    {
+      var routes = new List<Route>();
+      using (var conn = new SQLiteConnection($"Data Source={_dbPath};Version=3;"))
+      {
+        conn.Open();
+        string sql = "SELECT * FROM Routes";
+        using (var cmd = new SQLiteCommand(sql, conn))
+        {
+          using (var reader = cmd.ExecuteReader())
+          {
+            while (reader.Read())
+            {
+              routes.Add(new Route
+              {
+                Id = Convert.ToInt32(reader["Id"]),
+                Start = reader["Start"].ToString(),
+                End = reader["End"].ToString(),
+                Waypoints = reader["Waypoints"].ToString()
+              });
+            }
+          }
+        }
+      }
+      return routes;
+    }
+
   }
 }
