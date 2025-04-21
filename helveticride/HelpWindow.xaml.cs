@@ -22,6 +22,7 @@ namespace helveticride
     public HelpWindow()
     {
       InitializeComponent();
+      WindowState = WindowState.Maximized;
     }
     private void Back_Click(object sender, RoutedEventArgs e)
     {

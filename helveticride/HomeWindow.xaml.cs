@@ -6,7 +6,8 @@ namespace helveticride
   {
     public HomeWindow()
     {
-      InitializeComponent();  // Stellt sicher, dass das XAML korrekt initialisiert wird
+      InitializeComponent();
+      WindowState = WindowState.Maximized;
     }
 
     private void ToMap_Click(object sender, RoutedEventArgs e) => Navigate(new MainWindow());

@@ -16,6 +16,7 @@ namespace helveticride
     public MainWindow()
     {
       InitializeComponent();
+      WindowState = WindowState.Maximized;
       _database = new Database();
       InitializeWebView();
     }

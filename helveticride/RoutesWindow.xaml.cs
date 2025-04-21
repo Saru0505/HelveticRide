@@ -11,6 +11,7 @@ namespace helveticride
     public RoutesWindow()
     {
       InitializeComponent();
+      WindowState = WindowState.Maximized;
       _database = new Database();
       LoadRoutes();
     }
