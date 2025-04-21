@@ -1,12 +1,23 @@
 ﻿<Window x:Class="helveticride.RoutesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:helveticride"
-        mc:Ignorable="d"
-        Title="RoutesWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Gespeicherte Routen" Height="500" Width="800"
+        Background="#0c0c18">
+  <Grid Margin="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <TextBlock Text="💾 Gespeicherte Routen" Foreground="#c6a0f6" FontSize="24" Margin="0 0 0 10"/>
+
+    <TextBox x:Name="RoutesTextBox" Grid.Row="1" 
+                 Background="#1a1a2e" Foreground="White" FontSize="14"
+                 TextWrapping="Wrap" IsReadOnly="True" VerticalScrollBarVisibility="Auto"/>
+
+    <Button Grid.Row="2" Content="🔙 Zurück" Margin="0 10 0 0"
+                Background="#7f5af0" Foreground="White" Height="40"
+                FontSize="16" Click="BackButton_Click"/>
+  </Grid>
 </Window>

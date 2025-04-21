@@ -12,17 +12,9 @@
     </Grid.RowDefinitions>
 
     <!-- WebView2 takes top area only -->
-    <wv:WebView2 Name="webView" Grid.Row="0" />
+    <wv:WebView2 Name="webView" Grid.Row="0" Grid.RowSpan="2" />
 
-    <!-- Navbar placed below -->
-    <StackPanel Grid.Row="1" Orientation="Horizontal" Background="#0c0c18"
-              HorizontalAlignment="Center">
-      <Button Content="🏠 Home" Width="100" Margin="5" Click="Home_Click" />
-      <Button Content="🗺 Karte" Width="100" Margin="5" Click="Map_Click" />
-      <Button Content="💾 Routen" Width="100" Margin="5" Click="Routes_Click" />
-      <Button Content="⚙ Einstellungen" Width="100" Margin="5" Click="Settings_Click" />
-      <Button Content="❓ Hilfe" Width="100" Margin="5" Click="Help_Click" />
-    </StackPanel>
+   
   </Grid>
 
 </Window>

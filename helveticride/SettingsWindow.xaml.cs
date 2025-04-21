@@ -23,5 +23,12 @@ namespace helveticride
     {
       InitializeComponent();
     }
+
+    private void Back_Click(object sender, RoutedEventArgs e)
+    {
+      new MainWindow().Show();
+      this.Close();
+    }
+
   }
 }

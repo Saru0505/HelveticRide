@@ -14,8 +14,8 @@ namespace helveticride
     public MainWindow()
     {
       InitializeComponent();
-      _database = new Database(); // Initialisiere die Datenbankklasse
-      InitializeWebView();        // Starte WebView2
+      _database = new Database();
+      InitializeWebView();
     }
 
     private async void InitializeWebView()
@@ -25,16 +25,11 @@ namespace helveticride
         await webView.EnsureCoreWebView2Async();
 
         string relativePath = "map.html";
-        string projectDirectory = AppDomain.CurrentDomain.BaseDirectory;
-        string fullPath = Path.Combine(projectDirectory, relativePath);
+        string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
 
         if (File.Exists(fullPath))
         {
           webView.Source = new Uri("file:///" + fullPath);
-        }
-        else
-        {
-          MessageBox.Show("Fehler: Die Datei map.html wurde nicht gefunden.");
         }
 
         webView.CoreWebView2.WebMessageReceived += WebView_WebMessageReceived;
@@ -50,10 +45,7 @@ namespace helveticride
       try
       {
         string message = e.TryGetWebMessageAsString();
-        MessageBox.Show("Empfangene Nachricht:\n" + message);
-
         dynamic json = JsonConvert.DeserializeObject(message);
-
 
         if (json?.type == "saveRoute")
         {
@@ -61,18 +53,33 @@ namespace helveticride
           string end = json.end;
           string waypoints = json.waypoints;
 
-          if (string.IsNullOrWhiteSpace(start) || string.IsNullOrWhiteSpace(end))
+          if (!string.IsNullOrWhiteSpace(start) && !string.IsNullOrWhiteSpace(end))
           {
-            MessageBox.Show("Fehler: Start oder Endpunkt darf nicht leer sein.");
-            return;
+            _database.SaveRoute(start, end, waypoints);
           }
-
-          _database.SaveRoute(start, end, waypoints);
-          MessageBox.Show("Route erfolgreich gespeichert.");
         }
-        else
+        else if (json?.type == "navigate")
         {
-          MessageBox.Show("Ungültige Nachricht erhalten.");
+          string target = json.target;
+
+          Application.Current.Dispatcher.Invoke(() =>
+          {
+            Window window = target switch
+            {
+              "home" => new HomeWindow(),
+              "routes" => new RoutesWindow(),
+              "settings" => new SettingsWindow(),
+              "help" => new HelpWindow(),
+              "map" => new MainWindow(),
+              _ => null
+            };
+
+            if (window != null)
+            {
+              window.Show();
+              this.Close();
+            }
+          });
         }
       }
       catch (Exception ex)
@@ -80,41 +87,5 @@ namespace helveticride
         MessageBox.Show("Fehler beim Verarbeiten der Nachricht:\n" + ex.Message);
       }
     }
-
-    private void Home_Click(object sender, RoutedEventArgs e)
-    {
-      var window = new HomeWindow();
-      window.Show();
-      this.Close();
-    }
-
-    private void Map_Click(object sender, RoutedEventArgs e)
-    {
-      // Du bist bereits in MainWindow – ggf. Seite neu laden
-      webView.Reload();
-    }
-
-    private void Routes_Click(object sender, RoutedEventArgs e)
-    {
-      var window = new RoutesWindow();
-      window.Show();
-      this.Close();
-    }
-
-    private void Settings_Click(object sender, RoutedEventArgs e)
-    {
-      var window = new SettingsWindow();
-      window.Show();
-      this.Close();
-    }
-
-    private void Help_Click(object sender, RoutedEventArgs e)
-    {
-      var window = new HelpWindow();
-      window.Show();
-      this.Close();
-    }
-
-
   }
 }

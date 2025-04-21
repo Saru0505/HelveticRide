@@ -1,27 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace helveticride
 {
-  /// <summary>
-  /// Interaktionslogik für RoutesWindow.xaml
-  /// </summary>
   public partial class RoutesWindow : Window
   {
+    private Database _database;
+
     public RoutesWindow()
     {
       InitializeComponent();
+      _database = new Database();
+      LoadRoutes();
+    }
+
+    private void LoadRoutes()
+    {
+      string routes = _database.GetAllRoutes();
+      RoutesTextBox.Text = routes;
+    }
+
+    private void BackButton_Click(object sender, RoutedEventArgs e)
+    {
+      new MainWindow().Show();
+      this.Close();
     }
   }
 }

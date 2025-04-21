@@ -6,18 +6,28 @@
   <title>Google Maps Route</title>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY_YrWCoDtro9Ms4DuB04AueAyrQWibE8&libraries=places"></script>
   <style>
-    /* Grundlayout */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
     }
 
-    /* Die Sidebar links */
+    .main {
+      flex: 1;
+      display: flex;
+      height: 100%;
+    }
+
     .sidebar {
       width: 350px;
-      height: 100vh;
-      background: #0c0c18; /* Dunkles Blau/Schwarz */
+      background: #0c0c18;
       color: white;
       padding: 20px;
       display: flex;
@@ -25,20 +35,17 @@
       justify-content: start;
     }
 
-      /* Titel oben */
       .sidebar h2 {
         font-size: 24px;
+        color: #c6a0f6;
         margin-bottom: 10px;
-        color: #c6a0f6; /* Violett */
       }
 
-      /* Kleine Labels */
       .sidebar label {
         font-size: 14px;
         color: #aaa;
       }
 
-      /* Eingabefelder */
       .sidebar input {
         width: 100%;
         padding: 10px;
@@ -49,7 +56,6 @@
         color: white;
       }
 
-      /* Buttons */
       .sidebar button {
         width: 100%;
         padding: 12px;
@@ -61,7 +67,7 @@
       }
 
     .button-primary {
-      background: #7f5af0; /* Lila */
+      background: #7f5af0;
       color: white;
     }
 
@@ -78,7 +84,6 @@
         background: #333;
       }
 
-    /* Route-Übersicht */
     .route-details {
       background: rgba(255, 255, 255, 0.1);
       padding: 15px;
@@ -86,39 +91,67 @@
       margin-bottom: 20px;
     }
 
-    /* Karte */
     #map {
       flex-grow: 1;
-      height: 100vh;
     }
-  </style>
 
+    .bottom-nav {
+      background: #0c0c18;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-top: 1px solid #222;
+    }
+
+      .bottom-nav button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 10px 20px;
+      }
+
+        .bottom-nav button:hover {
+          background: #1a1a2e;
+          border-radius: 10px;
+        }
+  </style>
 </head>
 <body onload="initMap()">
 
-  <div class="sidebar">
-    <h2>Your Journey</h2>
+  <div class="main">
+    <div class="sidebar">
+      <h2>Your Journey</h2>
+      <div class="route-details">
+        <p><strong>From:</strong> <span id="routeStart">---</span></p>
+        <p><strong>To:</strong> <span id="routeEnd">---</span></p>
+        <p>🕒 <span id="duration">0 min</span> | 📏 <span id="distance">0 km</span></p>
+      </div>
 
-    <div class="route-details">
-      <p><strong>From:</strong> <span id="routeStart">---</span></p>
-      <p><strong>To:</strong> <span id="routeEnd">---</span></p>
-      <p>🕒 <span id="duration">0 min</span> | 📏 <span id="distance">0 km</span></p>
+      <label for="start">Start</label>
+      <input type="text" id="start" placeholder="Geben Sie den Startpunkt ein">
+
+      <label for="waypoints">Stop One (optional)</label>
+      <input type="text" id="waypoints" placeholder="Stop hinzufügen">
+
+      <label for="end">End</label>
+      <input type="text" id="end" placeholder="Geben Sie das Ziel ein">
+
+      <button class="button-primary" onclick="calculateRoute()">Route Berechnen</button>
+      <button class="button-secondary" onclick="saveRoute()">Route Speichern</button>
     </div>
 
-    <label for="start">Start</label>
-    <input type="text" id="start" placeholder="Geben Sie den Startpunkt ein">
-
-    <label for="waypoints">Stop One (optional)</label>
-    <input type="text" id="waypoints" placeholder="Stop hinzufügen">
-
-    <label for="end">End</label>
-    <input type="text" id="end" placeholder="Geben Sie das Ziel ein">
-
-    <button class="button-primary" onclick="calculateRoute()">Route Berechnen</button>
-    <button class="button-secondary" onclick="saveRoute()">Route Speichern</button>
+    <div id="map"></div>
   </div>
 
-  <div id="map"></div>
+  <div class="bottom-nav">
+    <button onclick="navigate('home')">🏠 Home</button>
+    <button onclick="navigate('map')">🗺 Karte</button>
+    <button onclick="navigate('routes')">💾 Routen</button>
+    <button onclick="navigate('settings')">⚙ Einstellungen</button>
+    <button onclick="navigate('help')">❓ Hilfe</button>
+  </div>
 
   <script>
     let map;
@@ -142,14 +175,14 @@
 
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 48.137154, lng: 11.576124 }, // München als Standard
+        center: { lat: 48.137154, lng: 11.576124 },
         zoom: 6
       });
       directionsService = new google.maps.DirectionsService();
       directionsRenderer = new google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
 
-      initAutocomplete()
+      initAutocomplete();
     }
 
     function calculateRoute() {
@@ -175,11 +208,9 @@
         if (status === google.maps.DirectionsStatus.OK) {
           directionsRenderer.setDirections(result);
 
-          // Extrahiere die Dauer und Distanz
           let duration = result.routes[0].legs[0].duration.text;
           let distance = result.routes[0].legs[0].distance.text;
 
-          // Zeige die Werte in der Sidebar an
           document.getElementById("routeStart").innerText = start;
           document.getElementById("routeEnd").innerText = end;
           document.getElementById("duration").innerText = duration;
@@ -190,17 +221,12 @@
       });
     }
 
-
-
     function saveRoute() {
       let start = document.getElementById("start").value;
       let end = document.getElementById("end").value;
       let waypoints = document.getElementById("waypoints").value;
 
-      if (!start || !end) {
-        alert("Bitte geben Sie sowohl den Startpunkt als auch das Ziel ein, um die Route zu speichern.");
-        return;
-      }
+      if (!start || !end) return;
 
       let routeData = {
         type: "saveRoute",
@@ -209,23 +235,16 @@
         waypoints: waypoints
       };
 
-      console.log("Sende Route an WebView2:", routeData);
-
       if (window.chrome && window.chrome.webview) {
         window.chrome.webview.postMessage(JSON.stringify(routeData));
-        alert("Route wird gespeichert...");
-      } else {
-        alert("WebView2 nicht verfügbar!");
       }
     }
 
-    // Optional: Funktion um die gespeicherten Routen zu laden (falls du eine Anzeige in HTML haben möchtest)
-    function loadRoutes(routes) {
-      // Hier könnte eine Liste von gespeicherten Routen angezeigt werden
-      console.log("Gespeicherte Routen:", routes);
+    function navigate(target) {
+      if (window.chrome && window.chrome.webview) {
+        window.chrome.webview.postMessage(JSON.stringify({ type: "navigate", target }));
+      }
     }
-
-
   </script>
 </body>
 </html>

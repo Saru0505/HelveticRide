@@ -9,15 +9,14 @@ namespace helveticride
       InitializeComponent();  // Stellt sicher, dass das XAML korrekt initialisiert wird
     }
 
+    private void ToMap_Click(object sender, RoutedEventArgs e) => Navigate(new MainWindow());
+    private void ToRoutes_Click(object sender, RoutedEventArgs e) => Navigate(new RoutesWindow());
+    private void ToSettings_Click(object sender, RoutedEventArgs e) => Navigate(new SettingsWindow());
+    private void ToHelp_Click(object sender, RoutedEventArgs e) => Navigate(new HelpWindow());
 
-    // Der Event-Handler für den Button-Klick
-    private void GoToRoutePlanner_Click(object sender, RoutedEventArgs e)
+    private void Navigate(Window window)
     {
-      // Öffne das MainWindow
-      MainWindow mainWindow = new MainWindow();
-      mainWindow.Show();
-
-      // Schließe das aktuelle HomeWindow
+      window.Show();
       this.Close();
     }
   }

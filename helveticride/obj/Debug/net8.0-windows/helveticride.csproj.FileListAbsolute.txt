@@ -107,7 +107,6 @@ C:\Users\saruj\Documents\helveticride\helveticride\bin\Debug\net8.0-windows\runt
 C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\HelpWindow.g.cs
 C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\RoutesWindow.g.cs
 C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\SettingsWindow.g.cs
-C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\helveticride_MarkupCompile.lref
 C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\HelpWindow.baml
 C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\RoutesWindow.baml
 C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\SettingsWindow.baml

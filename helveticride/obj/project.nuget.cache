@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dAVTGC6mgIHoCnJfMmwFMb86UzfLG3BT6ssn8GhTlKowLifzdOP4pAC7/qTRvgFa9gzKTvC2p88685MkPMFuLQ==",
+  "dgSpecHash": "rGWN9WK0s7bJpY0A6qLIEDL192XCNcYruu9w3sD3qO+iY2Mf+aX0Oc9SQtqnCQTRXfGMaMgtktPqTl9vwRjqJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\helveticride.csproj",
+  "projectFilePath": "C:\\Users\\saruj\\Documents\\helveticride\\helveticride\\helveticride.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\saruj\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\saruj\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
