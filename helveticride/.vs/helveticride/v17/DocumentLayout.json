@@ -15,20 +15,28 @@
       "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:routeswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\helpwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:helpwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\map.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:map.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\mappage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:mappage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\helpwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:helpwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\mappage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:mappage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -43,15 +51,7 @@
       "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\saruj\\AppData\\Local\\Temp\\.vsdbgsrc\\644641b03ea27f684f1c55db2f0d1edc1359112e5472b01b7fc183f613e0f444\\NavigationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\map.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:map.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\helpwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,13 +93,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "map.html",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\map.html",
               "RelativeDocumentMoniker": "map.html",
               "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\map.html",
               "RelativeToolTip": "map.html",
-              "ViewState": "AQIAAOwAAAAAAAAAAAAAwAUBAABCAAAA",
+              "ViewState": "AQIAAAoBAAAAAAAAAAAqwBcBAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-04-04T04:08:53.201Z",
               "IsPinned": true,
@@ -107,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "NavigationService.cs",
               "DocumentMoniker": "C:\\Users\\saruj\\AppData\\Local\\Temp\\.vsdbgsrc\\644641b03ea27f684f1c55db2f0d1edc1359112e5472b01b7fc183f613e0f444\\NavigationService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\644641b03ea27f684f1c55db2f0d1edc1359112e5472b01b7fc183f613e0f444\\NavigationService.cs",
@@ -120,20 +120,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "MapPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\MapPage.xaml.cs",
               "RelativeDocumentMoniker": "MapPage.xaml.cs",
               "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\MapPage.xaml.cs",
               "RelativeToolTip": "MapPage.xaml.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAowHUAAAAAAAAA",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAowIMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T09:48:56.488Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "MapPage.xaml",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\MapPage.xaml",
               "RelativeDocumentMoniker": "MapPage.xaml",
@@ -164,14 +164,14 @@
               "RelativeDocumentMoniker": "RoutesWindow.xaml.cs",
               "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\RoutesWindow.xaml.cs",
               "RelativeToolTip": "RoutesWindow.xaml.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAgwC0AAABHAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAkwD8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T09:07:25.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "HomeWindow.xaml",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\HomeWindow.xaml",
               "RelativeDocumentMoniker": "HomeWindow.xaml",
@@ -183,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -196,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "HomeWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\HomeWindow.xaml.cs",
               "RelativeDocumentMoniker": "HomeWindow.xaml.cs",
@@ -209,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "SettingsWindow.xaml",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\SettingsWindow.xaml",
               "RelativeDocumentMoniker": "SettingsWindow.xaml",
@@ -246,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "HelpWindow.xaml",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\HelpWindow.xaml",
               "RelativeDocumentMoniker": "HelpWindow.xaml",
@@ -258,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -276,7 +276,7 @@
               "RelativeDocumentMoniker": "Database.cs",
               "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\Database.cs*",
               "RelativeToolTip": "Database.cs*",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAiwGgAAAAAAAAA",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAswJ8AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T09:42:34.922Z",
               "EditorCaption": ""

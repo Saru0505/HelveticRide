@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("helveticride")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+842175bd84af093409746dd1f03a05ea99b0705c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a638092fe819f5c8d4baa6c0d454e4b2ffebae8")]
 [assembly: System.Reflection.AssemblyProductAttribute("helveticride")]
 [assembly: System.Reflection.AssemblyTitleAttribute("helveticride")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

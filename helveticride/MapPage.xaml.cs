@@ -13,6 +13,9 @@ namespace helveticride
     private Database _database;
     private Route _loadedRoute;
 
+    private string _currentDistance;
+    private string _currentDuration;
+
     public MapPage()
     {
       InitializeComponent();
@@ -82,10 +85,19 @@ namespace helveticride
           string end = json.end;
           string waypoints = json.waypoints;
 
+          string distance = _currentDistance ?? "";
+          string duration = _currentDuration ?? "";
+
           if (!string.IsNullOrWhiteSpace(start) && !string.IsNullOrWhiteSpace(end))
           {
-            _database.SaveRoute(start, end, waypoints);
+            _database.SaveRoute(start, end, waypoints, distance, duration);
+            MessageBox.Show($"✅ Route gespeichert\n📏 Distanz: {distance}\n🕒 Dauer: {duration}", "Erfolg");
           }
+        }
+        else if (json?.type == "routeInfo")
+        {
+          _currentDistance = json.distance;
+          _currentDuration = json.duration;
         }
         else if (json?.type == "navigate")
         {
@@ -115,6 +127,5 @@ namespace helveticride
         MessageBox.Show("Fehler beim Verarbeiten der Nachricht:\n" + ex.Message);
       }
     }
-
   }
 }

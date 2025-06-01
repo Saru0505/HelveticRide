@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Google Maps Route</title>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY_YrWCoDtro9Ms4DuB04AueAyrQWibE8&libraries=places"></script>
   <style>
@@ -119,7 +119,6 @@
   </style>
 </head>
 <body onload="initMap()">
-
   <div class="main">
     <div class="sidebar">
       <h2>Your Journey</h2>
@@ -130,13 +129,13 @@
       </div>
 
       <label for="start">Start</label>
-      <input type="text" id="start" placeholder="Geben Sie den Startpunkt ein">
+      <input type="text" id="start" placeholder="Geben Sie den Startpunkt ein" />
 
       <label for="waypoints">Stop One (optional)</label>
-      <input type="text" id="waypoints" placeholder="Stop hinzufügen">
+      <input type="text" id="waypoints" placeholder="Stop hinzufügen" />
 
       <label for="end">End</label>
-      <input type="text" id="end" placeholder="Geben Sie das Ziel ein">
+      <input type="text" id="end" placeholder="Geben Sie das Ziel ein" />
 
       <button class="button-primary" onclick="calculateRoute()">Route Berechnen</button>
       <button class="button-secondary" onclick="saveRoute()">Route Speichern</button>
@@ -173,8 +172,19 @@
       });
     }
 
+    function sendRouteInfoToApp(distance, duration) {
+      if (window.chrome && window.chrome.webview) {
+        const message = {
+          type: "routeInfo",
+          distance: distance,
+          duration: duration
+        };
+        window.chrome.webview.postMessage(JSON.stringify(message));
+      }
+    }
+
     function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
+      map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 48.137154, lng: 11.576124 },
         zoom: 6
       });
@@ -195,7 +205,9 @@
         return;
       }
 
-      let waypointArray = waypoints ? waypoints.split(',').map(w => ({ location: w.trim(), stopover: true })) : [];
+      let waypointArray = waypoints
+        ? waypoints.split(",").map((w) => ({ location: w.trim(), stopover: true }))
+        : [];
 
       let request = {
         origin: start,
@@ -215,8 +227,10 @@
           document.getElementById("routeEnd").innerText = end;
           document.getElementById("duration").innerText = duration;
           document.getElementById("distance").innerText = distance;
+
+          sendRouteInfoToApp(distance, duration);
         } else {
-          alert('Route konnte nicht berechnet werden: ' + status);
+          alert("Route konnte nicht berechnet werden: " + status);
         }
       });
     }
@@ -249,21 +263,31 @@
     function showRouteFromDatabase(start, end, waypointsString) {
       let waypoints = [];
       if (waypointsString && waypointsString.trim() !== "") {
-        waypoints = waypointsString.split(';').map(p => ({ location: p.trim() }));
+        waypoints = waypointsString.split(";").map((p) => ({ location: p.trim() }));
       }
 
       const request = {
         origin: start,
         destination: end,
         waypoints: waypoints,
-        travelMode: 'DRIVING'
+        travelMode: "DRIVING"
       };
 
       directionsService.route(request, function (result, status) {
-        if (status === 'OK') {
+        if (status === "OK") {
           directionsRenderer.setDirections(result);
+
+          let duration = result.routes[0].legs[0].duration.text;
+          let distance = result.routes[0].legs[0].distance.text;
+
+          document.getElementById("routeStart").innerText = start;
+          document.getElementById("routeEnd").innerText = end;
+          document.getElementById("duration").innerText = duration;
+          document.getElementById("distance").innerText = distance;
+
+          sendRouteInfoToApp(distance, duration);
         } else {
-          alert('Fehler beim Anzeigen der Route: ' + status);
+          alert("Fehler beim Anzeigen der Route: " + status);
         }
       });
     }

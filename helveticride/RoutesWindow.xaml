@@ -19,27 +19,53 @@
                Margin="0 0 0 10"/>
 
     <!-- Datenanzeige -->
-    <DataGrid x:Name="RoutesList"
-              Grid.Row="1"
-              AutoGenerateColumns="False"
-              HeadersVisibility="Column"
-              CanUserAddRows="False"
-              Margin="0 10 0 10"
-              Background="#1a1a2e"
-              Foreground="White"
-              RowBackground="#1f1f2e"
-              AlternatingRowBackground="#2a2a3d"
-              BorderBrush="#444"
-              BorderThickness="1"
-              FontSize="14"
-              SelectionMode="Single">
+    <StackPanel Grid.Row="1">
+      <DataGrid x:Name="RoutesList"
+                AutoGenerateColumns="False"
+                HeadersVisibility="Column"
+                CanUserAddRows="False"
+                Background="#1a1a2e"
+                Foreground="White"
+                RowBackground="#1f1f2e"
+                AlternatingRowBackground="#2a2a3d"
+                BorderBrush="#444"
+                BorderThickness="1"
+                FontSize="14"
+                SelectionMode="Single"
+                Margin="0 0 0 10"
+                Height="300">
+        <DataGrid.Columns>
+          <DataGridTextColumn Header="Start" Binding="{Binding Start}" Width="*" />
+          <DataGridTextColumn Header="Ziel" Binding="{Binding End}" Width="*" />
+          <DataGridCheckBoxColumn Header="★" Binding="{Binding IsFavorite}" Width="50"/>
+        </DataGrid.Columns>
+      </DataGrid>
 
-      <DataGrid.Columns>
-        <DataGridTextColumn Header="Start" Binding="{Binding Start}" Width="*" />
-        <DataGridTextColumn Header="Ziel" Binding="{Binding End}" Width="*" />
-        <DataGridCheckBoxColumn Header="★" Binding="{Binding IsFavorite}" Width="50"/>
-      </DataGrid.Columns>
-    </DataGrid>
+      <!-- Detail-Anzeige -->
+      <Border Background="#1a1a2e"
+              BorderBrush="#555"
+              BorderThickness="1"
+              CornerRadius="8"
+              Padding="10"
+              Margin="0 10 0 0">
+        <StackPanel x:Name="RouteDetailsPanel">
+          <TextBlock Text="📄 Routendetails"
+                     FontWeight="Bold"
+                     FontSize="16"
+                     Foreground="#c6a0f6"
+                     Margin="0 0 0 10"/>
+          <TextBlock x:Name="DetailsStart" Foreground="White" Margin="0 2"/>
+          <TextBlock x:Name="DetailsEnd" Foreground="White" Margin="0 2"/>
+          <TextBlock x:Name="DetailsWaypoints" Foreground="White" Margin="0 2"/>
+          <TextBlock x:Name="DetailsFavorite" Foreground="White" Margin="0 2"/>
+          <TextBlock x:Name="DetailsCreatedAt" Foreground="White" Margin="0 2"/>
+          <TextBlock x:Name="DetailsDistance" Foreground="White" Margin="0 2"/>
+          <TextBlock x:Name="DetailsDuration" Foreground="White" Margin="0 2"/>
+
+
+        </StackPanel>
+      </Border>
+    </StackPanel>
 
     <!-- Button-Leiste -->
     <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0" >
