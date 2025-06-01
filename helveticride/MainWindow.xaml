@@ -1,20 +1,25 @@
 ﻿<Window x:Class="helveticride.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:wv="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
-        Title="Helveticride" Height="500" Width="800"
-        Background="#f3f4f6">
+        Title="helveticride"
+        WindowState="Maximized"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="White">
+
 
   <Grid>
     <Grid.RowDefinitions>
-      <RowDefinition Height="*" />
-      <RowDefinition Height="60" />
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
 
-    <!-- WebView2 takes top area only -->
-    <wv:WebView2 Name="webView" Grid.Row="0" Grid.RowSpan="2" />
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+      <Button Content="🗕" Width="40" Height="40" Click="Minimize_Click" />
+      <Button Content="✕" Width="40" Height="40" Click="Close_Click" />
+    </StackPanel>
 
-   
+    <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" />
   </Grid>
 
 </Window>

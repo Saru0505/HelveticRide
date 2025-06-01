@@ -110,3 +110,5 @@ C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\Sett
 C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\HelpWindow.baml
 C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\RoutesWindow.baml
 C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\SettingsWindow.baml
+C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\MapPage.baml
+C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\MapPage.g.cs

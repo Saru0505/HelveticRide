@@ -1,4 +1,4 @@
-﻿<Window x:Class="helveticride.RoutesWindow"
+﻿<Page x:Class="helveticride.RoutesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Gespeicherte Routen" Height="450" Width="600"
@@ -22,4 +22,4 @@
                     Background="#333" Foreground="White" Click="BackButton_Click"/>
     </StackPanel>
   </Grid>
-</Window>
+</Page>

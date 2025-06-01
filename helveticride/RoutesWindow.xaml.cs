@@ -1,17 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace helveticride
 {
-  public partial class RoutesWindow : Window
+  public partial class RoutesWindow : Page
   {
     private Database _database;
     private List<Route> _routeList;
+    private Route selectedRoute;
 
     public RoutesWindow()
     {
       InitializeComponent();
-      WindowState = WindowState.Maximized;
       _database = new Database();
       LoadRoutes();
     }
@@ -27,9 +28,8 @@ namespace helveticride
       var selectedRoute = (Route)RoutesList.SelectedItem;
       if (selectedRoute != null)
       {
-        var mainWindow = new MainWindow(selectedRoute);
-        mainWindow.Show();
-        this.Close();
+        ((MainWindow)Application.Current.MainWindow).MainFrame.Navigate(new MapPage(selectedRoute));
+
       }
       else
       {
@@ -39,8 +39,8 @@ namespace helveticride
 
     private void BackButton_Click(object sender, RoutedEventArgs e)
     {
-      new MainWindow().Show();
-      this.Close();
+      ((MainWindow)Application.Current.MainWindow).MainFrame.Navigate(new MapPage(selectedRoute));
+
     }
   }
 }
