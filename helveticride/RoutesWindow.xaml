@@ -1,8 +1,9 @@
 ﻿<Page x:Class="helveticride.RoutesWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Gespeicherte Routen" Height="450" Width="600"
-        Background="#0f0f1b">
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Gespeicherte Routen"
+      Background="#0f0f1b">
+
   <Grid Margin="20">
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto"/>
@@ -10,16 +11,59 @@
       <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
 
-    <TextBlock Text="Gespeicherte Routen" FontSize="24" Foreground="White" Margin="0 0 0 10"/>
+    <!-- Überschrift -->
+    <TextBlock Text="🌐 Gespeicherte Routen" 
+               FontSize="26" 
+               FontWeight="Bold" 
+               Foreground="#c6a0f6" 
+               Margin="0 0 0 10"/>
 
-    <ListBox x:Name="RoutesList" Grid.Row="1" Background="#1a1a2e" Foreground="White"
-                 FontSize="14" Height="300" SelectionMode="Single" Margin="0 10 0 10"/>
+    <!-- Datenanzeige -->
+    <DataGrid x:Name="RoutesList"
+              Grid.Row="1"
+              AutoGenerateColumns="False"
+              HeadersVisibility="Column"
+              CanUserAddRows="False"
+              Margin="0 10 0 10"
+              Background="#1a1a2e"
+              Foreground="White"
+              RowBackground="#1f1f2e"
+              AlternatingRowBackground="#2a2a3d"
+              BorderBrush="#444"
+              BorderThickness="1"
+              FontSize="14"
+              SelectionMode="Single">
 
-    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
-      <Button Content="🧭 Route anzeigen" Width="140" Height="40"
-                    Background="#7f5af0" Foreground="White" Click="ShowRoute_Click"/>
-      <Button Content="🔙 Zurück" Width="100" Height="40"
-                    Background="#333" Foreground="White" Click="BackButton_Click"/>
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Start" Binding="{Binding Start}" Width="*" />
+        <DataGridTextColumn Header="Ziel" Binding="{Binding End}" Width="*" />
+        <DataGridCheckBoxColumn Header="★" Binding="{Binding IsFavorite}" Width="50"/>
+      </DataGrid.Columns>
+    </DataGrid>
+
+    <!-- Button-Leiste -->
+    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0" >
+      <Button Content="★ Favorit umschalten"
+              Width="160" Height="40"
+              Margin="0 0 10 0"
+              Background="#f39c12"
+              Foreground="White"
+              FontWeight="Bold"
+              Click="ToggleFavorite_Click"/>
+
+      <Button Content="🧭 Route anzeigen"
+              Width="140" Height="40"
+              Margin="0 0 10 0"
+              Background="#7f5af0"
+              Foreground="White"
+              Click="ShowRoute_Click"/>
+
+      <Button Content="🔙 Zurück"
+              Width="100" Height="40"
+              Background="#333"
+              Foreground="White"
+              Click="BackButton_Click"/>
     </StackPanel>
+
   </Grid>
 </Page>

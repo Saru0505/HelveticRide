@@ -42,5 +42,17 @@ namespace helveticride
       ((MainWindow)Application.Current.MainWindow).MainFrame.Navigate(new MapPage(selectedRoute));
 
     }
+
+    private void ToggleFavorite_Click(object sender, RoutedEventArgs e)
+    {
+      var selected = (Route)RoutesList.SelectedItem;
+      if (selected != null)
+      {
+        selected.IsFavorite = !selected.IsFavorite;
+        _database.UpdateFavoriteStatus(selected.Id, selected.IsFavorite);
+        LoadRoutes();
+      }
+    }
+
   }
 }

@@ -16,6 +16,10 @@ namespace helveticride
         SQLiteConnection.CreateFile(_dbPath);
         CreateRoutesTable();
       }
+      else
+      {
+        EnsureFavoriteColumnExists();
+      }
     }
 
     private void CreateRoutesTable()
@@ -28,11 +32,39 @@ namespace helveticride
                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                 Start TEXT NOT NULL,
                 End TEXT NOT NULL,
-                Waypoints TEXT
+                Waypoints TEXT,
+                IsFavorite INTEGER DEFAULT 0
             )";
         using (var cmd = new SQLiteCommand(sql, conn))
         {
           cmd.ExecuteNonQuery();
+        }
+      }
+    }
+
+    private void EnsureFavoriteColumnExists()
+    {
+      using (var conn = new SQLiteConnection($"Data Source={_dbPath};Version=3;"))
+      {
+        conn.Open();
+        using (var cmd = new SQLiteCommand("PRAGMA table_info(Routes);", conn))
+        using (var reader = cmd.ExecuteReader())
+        {
+          bool hasIsFavorite = false;
+          while (reader.Read())
+          {
+            if (reader["name"].ToString().Equals("IsFavorite", StringComparison.OrdinalIgnoreCase))
+            {
+              hasIsFavorite = true;
+              break;
+            }
+          }
+
+          if (!hasIsFavorite)
+          {
+            using var alterCmd = new SQLiteCommand("ALTER TABLE Routes ADD COLUMN IsFavorite INTEGER DEFAULT 0;", conn);
+            alterCmd.ExecuteNonQuery();
+          }
         }
       }
     }
@@ -44,7 +76,7 @@ namespace helveticride
         using (var conn = new SQLiteConnection($"Data Source={_dbPath};Version=3;"))
         {
           conn.Open();
-          string sql = "INSERT INTO Routes (Start, End, Waypoints) VALUES (@Start, @End, @Waypoints)";
+          string sql = "INSERT INTO Routes (Start, End, Waypoints, IsFavorite) VALUES (@Start, @End, @Waypoints, 0)";
           using (var cmd = new SQLiteCommand(sql, conn))
           {
             cmd.Parameters.AddWithValue("@Start", start);
@@ -60,6 +92,17 @@ namespace helveticride
       }
     }
 
+    public void UpdateFavoriteStatus(int routeId, bool isFavorite)
+    {
+      using var conn = new SQLiteConnection($"Data Source={_dbPath};Version=3;");
+      conn.Open();
+      var sql = "UPDATE Routes SET IsFavorite = @IsFavorite WHERE Id = @Id";
+      using var cmd = new SQLiteCommand(sql, conn);
+      cmd.Parameters.AddWithValue("@IsFavorite", isFavorite ? 1 : 0);
+      cmd.Parameters.AddWithValue("@Id", routeId);
+      cmd.ExecuteNonQuery();
+    }
+
     public string GetAllRoutes()
     {
       string result = "";
@@ -73,7 +116,7 @@ namespace helveticride
           {
             while (reader.Read())
             {
-              result += $"Start: {reader["Start"]}, End: {reader["End"]}, Waypoints: {reader["Waypoints"]}\n";
+              result += $"Start: {reader["Start"]}, End: {reader["End"]}, Waypoints: {reader["Waypoints"]}, Favorit: {reader["IsFavorite"]}\n";
             }
           }
         }
@@ -99,7 +142,8 @@ namespace helveticride
                 Id = Convert.ToInt32(reader["Id"]),
                 Start = reader["Start"].ToString(),
                 End = reader["End"].ToString(),
-                Waypoints = reader["Waypoints"].ToString()
+                Waypoints = reader["Waypoints"].ToString(),
+                IsFavorite = Convert.ToInt32(reader["IsFavorite"]) == 1
               });
             }
           }
@@ -115,10 +159,12 @@ namespace helveticride
     public string Start { get; set; }
     public string End { get; set; }
     public string Waypoints { get; set; }
+    public bool IsFavorite { get; set; }
 
     public override string ToString()
     {
-      return $"Start: {Start}, End: {End}, Waypoints: {Waypoints}";
+      return $"Start: {Start}, End: {End}, Waypoints: {Waypoints}, Favorit: {IsFavorite}";
     }
   }
+
 }

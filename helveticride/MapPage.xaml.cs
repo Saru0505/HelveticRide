@@ -115,10 +115,6 @@ namespace helveticride
         MessageBox.Show("Fehler beim Verarbeiten der Nachricht:\n" + ex.Message);
       }
     }
-    private void Back_Click(object sender, RoutedEventArgs e)
-    {
-      ((MainWindow)Application.Current.MainWindow).MainFrame.Navigate(new RoutesWindow());
-    }
 
   }
 }

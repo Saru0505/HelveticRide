@@ -1,7 +1,7 @@
 ﻿<Page x:Class="helveticride.HelpWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Hilfe" Height="500" Width="800"
+        Title="Hilfe"
         Background="#0c0c18">
   <Grid Margin="20">
     <StackPanel>

@@ -1,7 +1,7 @@
 ﻿<Page x:Class="helveticride.SettingsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Einstellungen" Height="500" Width="800"
+        Title="Einstellungen" 
         Background="#0c0c18">
   <Grid Margin="20">
     <StackPanel>
