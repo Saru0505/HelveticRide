@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\saruj\Documents\helveticride\helveticride\App.xaml
-6-951017165
+8895820353
 3-1138284101
-13-1726229537
+19-1097140205
 2421759062775
-HelpWindow.xaml;HomeWindow.xaml;MainWindow.xaml;MapPage.xaml;RoutesWindow.xaml;SettingsWindow.xaml;
+HelpWindow.xaml;HomeWindow.xaml;LoginWindow.xaml;MainWindow.xaml;MapPage.xaml;RegisterWindow.xaml;RoutesWindow.xaml;SettingsWindow.xaml;
 
 False
 

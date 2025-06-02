@@ -26,6 +26,20 @@ namespace helveticride
       }
     }
 
+    public int GetLastInsertedRouteId()
+    {
+      using (var conn = new SQLiteConnection($"Data Source={_dbPath};Version=3;"))
+      {
+        conn.Open();
+        string sql = "SELECT MAX(Id) FROM Routes";
+        using (var cmd = new SQLiteCommand(sql, conn))
+        {
+          object result = cmd.ExecuteScalar();
+          return result != null ? Convert.ToInt32(result) : -1;
+        }
+      }
+    }
+
     private void CreateRoutesTable()
     {
       using (var conn = new SQLiteConnection($"Data Source={_dbPath};Version=3;"))

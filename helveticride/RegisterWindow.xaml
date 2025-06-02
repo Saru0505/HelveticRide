@@ -1,0 +1,21 @@
+﻿<Window x:Class="helveticride.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registrieren" Height="300" Width="400" WindowStartupLocation="CenterScreen">
+  <Grid Margin="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <TextBlock Text="Benutzername:"/>
+    <TextBox x:Name="UsernameBox" Grid.Row="1" Margin="0,5"/>
+
+    <TextBlock Text="Passwort:" Grid.Row="2" Margin="0,10,0,0"/>
+    <PasswordBox x:Name="PasswordBox" Grid.Row="3" Margin="0,5"/>
+
+    <Button Content="Registrieren" Grid.Row="4" Margin="0,15,0,0" Height="35" Click="Register_Click"/>
+  </Grid>
+</Window>

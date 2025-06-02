@@ -11,6 +11,17 @@ namespace helveticride
     public MainWindow()
     {
       InitializeComponent();
+
+      // Login erzwingen
+      var login = new LoginWindow();
+      bool? result = login.ShowDialog();
+
+      if (result != true)
+      {
+        Application.Current.Shutdown(); // beendet die App bei Login-Abbruch oder Misserfolg
+        return;
+      }
+
       MainFrame.Navigate(new HomeWindow()); // Startseite setzen
     }
 
@@ -24,6 +35,7 @@ namespace helveticride
     {
       MainFrame.Navigate(page);
     }
+
     private void Minimize_Click(object sender, RoutedEventArgs e)
     {
       WindowState = WindowState.Minimized;
@@ -33,6 +45,5 @@ namespace helveticride
     {
       Close();
     }
-
   }
 }

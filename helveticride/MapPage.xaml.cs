@@ -91,6 +91,11 @@ namespace helveticride
           if (!string.IsNullOrWhiteSpace(start) && !string.IsNullOrWhiteSpace(end))
           {
             _database.SaveRoute(start, end, waypoints, distance, duration);
+
+            // letzte gespeicherte RouteId holen (z. B. mit MAX(Id))
+            int routeId = _database.GetLastInsertedRouteId();
+            var userRouteDb = new UserRouteDatabase();
+            userRouteDb.SaveUserRoute(UserSession.CurrentUserId, routeId);
             MessageBox.Show($"✅ Route gespeichert\n📏 Distanz: {distance}\n🕒 Dauer: {duration}", "Erfolg");
           }
         }

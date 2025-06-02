@@ -112,3 +112,7 @@ C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\Rout
 C:\Users\saruj\Documents\HelveticRide\helveticride\obj\Debug\net8.0-windows\SettingsWindow.baml
 C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\MapPage.baml
 C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\MapPage.g.cs
+C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\LoginWindow.baml
+C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\RegisterWindow.baml
+C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\LoginWindow.g.cs
+C:\Users\saruj\Documents\helveticride\helveticride\obj\Debug\net8.0-windows\RegisterWindow.g.cs
