@@ -63,9 +63,11 @@
           <Button.Resources>
             <Style TargetType="Border">
               <Setter Property="CornerRadius" Value="8"/>
+
             </Style>
           </Button.Resources>
         </Button>
+
       </StackPanel>
     </Border>
   </Grid>

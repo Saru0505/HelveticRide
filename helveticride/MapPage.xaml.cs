@@ -94,8 +94,8 @@ namespace helveticride
 
             // letzte gespeicherte RouteId holen (z. B. mit MAX(Id))
             int routeId = _database.GetLastInsertedRouteId();
-            var userRouteDb = new UserRouteDatabase();
-            userRouteDb.SaveUserRoute(UserSession.CurrentUserId, routeId);
+
+            _database.SaveUserRoute(UserSession.CurrentUserId, routeId);
             MessageBox.Show($"✅ Route gespeichert\n📏 Distanz: {distance}\n🕒 Dauer: {duration}", "Erfolg");
           }
         }

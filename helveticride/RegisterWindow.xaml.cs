@@ -5,12 +5,12 @@ namespace helveticride
 {
   public partial class RegisterWindow : Window
   {
-    private UserDatabase _userDb;
+    private Database _userDb;
 
     public RegisterWindow()
     {
       InitializeComponent();
-      _userDb = new UserDatabase();
+      _userDb = new Database();
     }
 
     private void Register_Click(object sender, RoutedEventArgs e)

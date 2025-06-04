@@ -6,12 +6,12 @@ namespace helveticride
 {
   public partial class LoginWindow : Window
   {
-    private UserDatabase _userDb;
+    private Database _userDb;
 
     public LoginWindow()
     {
       InitializeComponent();
-      _userDb = new UserDatabase();
+      _userDb = new Database();
     }
 
     private void Login_Click(object sender, RoutedEventArgs e)
