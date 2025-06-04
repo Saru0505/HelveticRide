@@ -1,24 +1,115 @@
-# **HelveticRide**
+# 🏍️ HelveticRide – Dein persönlicher Routenplaner
 
-## **Projektübersicht**
-Helvetic Rides ist eine App, mit der Motorradfahrer ihre Touren planen und teilen können. Benutzer können eigene Routen erstellen und andere dazu einladen. Außerdem gibt es eine Google Maps-Integration, die es ermöglicht, die Routen direkt auf einer Karte anzuzeigen.
-
----
-
-## **Funktionen**
-- **Routen erstellen:** Benutzer können ihre eigene Motorradtour planen und speichern.
-- **Einladungen versenden:** Du kannst andere per E-Mail zu einem Rideout einladen.
-- **Google Maps:** Die App zeigt deine Route auf einer Karte an, sodass du die Tour einfach verfolgen kannst.
-
-_Nice to have:_  
-- **Routen durchsuchen:** In der App stehen vordefinierte Routen zur Auswahl, die du einfach für deinen Rideout nutzen kannst.
+**HelveticRide** ist eine moderne WPF-Anwendung zur Verwaltung und Visualisierung von Motorradrouten in der Schweiz. Das Projekt wurde im Rahmen eines Semesterprojekts entwickelt und vereint objektorientierte Programmierung, Datenbankmanagement und UI-Design.
 
 ---
 
-## **Technologien**
-- **WPF (Windows Presentation Foundation):** Die App-Oberfläche wird mit WPF entwickelt.
-- **C#:** Die Programmiersprache, in der die App geschrieben ist.
-- **SMTP-Server:** Wird verwendet, um E-Mails zu versenden (z. B. Gmail).
-- **Google Maps API:** Ermöglicht das Anzeigen der Routen auf einer Karte.
-- **XAML:** Wird für das Design der Benutzeroberfläche genutzt.
-- **SQLite:** Wird verwendet, um Routen und Feedback-Daten zu speichern.
+## 📌 Projektübersicht
+
+- **Sprache:** C# (.NET)
+- **Technologie:** WPF mit SQLite
+- **Themen:** Benutzerverwaltung, Routenspeicherung, Favoriten, Feedback
+- **Zielgruppe:** Motorradfahrer:innen & Tourenliebhaber:innen
+
+---
+
+## 🔧 Funktionen
+
+- ✅ Benutzerregistrierung & Login
+- ✅ Routen speichern, anzeigen, favorisieren
+- ✅ Web-basierte Kartendarstellung mit WebView2
+- ✅ Feedbackfunktion für User-Feedback
+- ✅ Beispielrouten über SQL-Datei importierbar
+- ✅ Datenbankverbindung via Singleton
+- ✅ Trennung von Logik und Datenmodell
+
+---
+
+## 🗃️ Datenbankstruktur
+
+Die Anwendung nutzt eine SQLite-Datenbank mit folgenden Tabellen:
+
+- **Users** – speichert registrierte Benutzer
+- **Routes** – speichert Routeninformationen
+- **UserRoutes** – verbindet Nutzer und Routen
+- **Feedback** – speichert Rückmeldungen
+
+Die Struktur wird automatisch beim Start anhand der Datei [`create_tables.sql`](create_tables.sql) erstellt.
+
+---
+
+## 🧪 Beispielrouten importieren
+
+Optional kann die Datei [`sample_routes.sql`](sample_routes.sql) bereitgestellt werden. Diese Datei wird beim Start automatisch ausgeführt, sofern sie vorhanden ist.
+
+---
+
+## 🖼️ Diagramme
+
+Die folgenden drei Grafiken müssen als Teil der Projektdokumentation erstellt und im Git-Repo abgelegt werden:
+
+1. **ER-Diagramm**  
+   *Pfadvorschlag:* `docs/er-modell.png`
+
+2. **Relationales Modell**  
+   *Pfadvorschlag:* `docs/relationales-modell.png`
+
+3. **UML-Klassendiagramm**  
+   *Pfadvorschlag:* `docs/uml-klassendiagramm.png`
+
+👉 Platzhalter in dieser README:
+```md
+![ER-Modell](docs/er-modell.png)
+![Relationales Modell](docs/relationales-modell.png)
+![UML Klassendiagramm](docs/uml-klassendiagramm.png)
+```
+
+---
+
+## 🧭 Programmstart
+
+```bash
+dotnet build
+dotnet run
+```
+
+Stelle sicher, dass sich `create_tables.sql` im Output-Verzeichnis (`bin/Debug/...`) befindet.
+
+---
+
+## 📁 Projektstruktur (Auszug)
+
+```
+helveticride/
+│
+├── create_tables.sql
+├── sample_routes.sql         # Optional
+├── Database.cs               # Zentrale Datenbanklogik
+├── LoginWindow.xaml
+├── RegisterWindow.xaml
+├── MapPage.xaml
+├── RoutesWindow.xaml
+└── ...
+```
+
+---
+
+## 📜 Anforderungen (Modulübersicht)
+
+| Modul | Thema                                | Umsetzung                   |
+|--------|--------------------------------------|-----------------------------|
+| 106    | Datenbankzugriffe                   | ✅ CRUD in `Database.cs`    |
+| 162    | Datenmodellierung                   | ✅ ER & Relationalmodell geplant |
+| 164    | Datenbank-Skripte                   | ✅ `create_tables.sql`      |
+| 319    | Applikationsdesign                  | ✅ Klassenstruktur vorhanden|
+| 320    | OOP / Vererbung / Polymorphismus    | ✅ durch Datenmodelle       |
+| 322    | UI/UX & Validierung                 | ✅ WPF mit Eingabeprüfungen |
+
+---
+
+
+## 📸 Platzhalter für Diagramme
+
+![ER-Modell](docs/er-modell.png)  
+![Relationales Modell](docs/relationales-modell.png)  
+![UML Klassendiagramm](docs/uml-klassendiagramm.png)
