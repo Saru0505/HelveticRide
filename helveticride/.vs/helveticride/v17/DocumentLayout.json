@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -20,10 +24,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\routeswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:routeswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|solutionrelative:loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90386B3A-F797-4E21-87D7-9712B8CEE23D}|helveticride.csproj|c:\\users\\saruj\\documents\\helveticride\\helveticride\\registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -135,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MapPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\saruj\\Downloads\\MapPage.xaml.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\MapPage.xaml.cs",
@@ -187,20 +187,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "LoginWindow.xaml.cs",
               "ToolTip": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\LoginWindow.xaml.cs",
               "RelativeToolTip": "LoginWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T19:34:44.646Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "LoginWindow.xaml",
@@ -249,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MapPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\MapPage.xaml.cs",
               "RelativeDocumentMoniker": "MapPage.xaml.cs",
@@ -287,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RoutesWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\RoutesWindow.xaml.cs",
               "RelativeDocumentMoniker": "RoutesWindow.xaml.cs",
@@ -393,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Database.cs",
               "DocumentMoniker": "C:\\Users\\saruj\\Documents\\HelveticRide\\helveticride\\Database.cs",
               "RelativeDocumentMoniker": "Database.cs",
