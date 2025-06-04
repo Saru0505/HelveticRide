@@ -49,20 +49,13 @@ Optional kann die Datei [`sample_routes.sql`](sample_routes.sql) bereitgestellt 
 Die folgenden drei Grafiken müssen als Teil der Projektdokumentation erstellt und im Git-Repo abgelegt werden:
 
 1. **ER-Diagramm**  
-   *Pfadvorschlag:* `docs/er-modell.png`
+   
 
 2. **Relationales Modell**  
-   *Pfadvorschlag:* `docs/relationales-modell.png`
+  
 
 3. **UML-Klassendiagramm**  
-   *Pfadvorschlag:* `docs/uml-klassendiagramm.png`
-
-👉 Platzhalter in dieser README:
-```md
-![ER-Modell](docs/er-modell.png)
-![Relationales Modell](docs/relationales-modell.png)
-![UML Klassendiagramm](docs/uml-klassendiagramm.png)
-```
+   
 
 ---
 
