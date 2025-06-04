@@ -3,20 +3,64 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="HelpWindow">
 
-  <Grid Margin="20">
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto"/>
-      <RowDefinition Height="*"/>
-      <RowDefinition Height="Auto"/>
-    </Grid.RowDefinitions>
+  <Grid Background="#0c0c18">
+    <Button Content="← Zurück" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20"
+            Click="Back_Click" Background="Transparent" BorderBrush="Transparent"
+            FontSize="16" Foreground="#c6a0f6" Cursor="Hand"/>
 
-    <TextBlock Text="Hilfe &amp; Feedback" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" />
+    <Border Background="#1a1a2e" BorderBrush="#7f5af0" BorderThickness="3" CornerRadius="20"
+            Padding="40" Margin="60"
+            VerticalAlignment="Center" HorizontalAlignment="Center">
+      <StackPanel Width="500" HorizontalAlignment="Center" VerticalAlignment="Center">
 
+        <TextBlock Text="❔ Wie benutze ich Helveticride?" FontSize="20" FontWeight="Bold" Foreground="#c6a0f6" Margin="0,10,0,10"/>
 
-    <TextBox x:Name="FeedbackBox" Grid.Row="1" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"
-                 TextWrapping="Wrap" Height="200" FontSize="14" Margin="0,0,0,20"/>
+        <StackPanel>
+          <TextBlock Margin="0 2" Foreground="White">
+            <Run Text="1. "/><Run FontWeight="Bold" Text="Login oder Registrierung: "/>
+            <Run Foreground="#cccccc" Text="Erstelle einen Account oder logge dich ein."/>
+          </TextBlock>
 
-    <Button Grid.Row="2" Content="Feedback senden" Width="160" Height="35"
-                HorizontalAlignment="Left" Click="SendFeedback_Click"/>
+          <TextBlock Margin="0 2" Foreground="White">
+            <Run Text="2. "/><Run FontWeight="Bold" Text="Route planen: "/>
+            <Run Foreground="#cccccc" Text="Wähle Start und Ziel, um eine Route zu laden."/>
+          </TextBlock>
+
+          <TextBlock Margin="0 2" Foreground="White">
+            <Run Text="3. "/><Run FontWeight="Bold" Text="Route speichern oder als Favorit markieren: "/>
+            <Run Foreground="#cccccc" Text="Speichere oder favorisiere deine Route."/>
+          </TextBlock>
+
+          <TextBlock Margin="0 2" Foreground="White">
+            <Run Text="4. "/><Run FontWeight="Bold" Text="Gespeicherte Routen ansehen: "/>
+            <Run Foreground="#cccccc" Text="Gehe zur Routenseite, um gespeicherte Strecken zu öffnen."/>
+          </TextBlock>
+
+          <TextBlock Margin="0 2 0 10" Foreground="White">
+            <Run Text="5. "/><Run FontWeight="Bold" Text="Einstellungen und Hilfe: "/>
+            <Run Foreground="#cccccc" Text="Passe dein Profil an oder lies hier nach."/>
+          </TextBlock>
+        </StackPanel>
+
+        <Separator Margin="0,10" Background="#444"/>
+
+        <TextBlock Text="📨 Feedbackformular" FontSize="20" FontWeight="SemiBold" Foreground="#c6a0f6" Margin="0,0,0,10"/>
+
+        <TextBlock Text="Betreff:" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="SubjectBox" Height="30" Margin="0,0,0,10"
+                 Background="#2c2c3c" Foreground="White" BorderBrush="#555"/>
+
+        <TextBlock Text="Beschreibung:" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="DescriptionBox" AcceptsReturn="True" Height="100" TextWrapping="Wrap" Margin="0,0,0,10"
+                 Background="#2c2c3c" Foreground="White" BorderBrush="#555"/>
+
+        <TextBlock Text="(Optional) Deine E-Mail:" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="EmailBox" Height="30" Margin="0,0,0,20"
+                 Background="#2c2c3c" Foreground="White" BorderBrush="#555"/>
+
+        <Button Content="Absenden" Background="#7f5af0" Foreground="White" FontWeight="Bold"
+                Click="SubmitFeedback_Click" Padding="10" BorderThickness="0" Cursor="Hand"/>
+      </StackPanel>
+    </Border>
   </Grid>
 </Page>

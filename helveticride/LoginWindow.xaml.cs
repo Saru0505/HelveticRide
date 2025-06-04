@@ -38,5 +38,20 @@ namespace helveticride
       var registerWindow = new RegisterWindow();
       registerWindow.ShowDialog();
     }
+
+    private void UsernameBox_TextChanged(object sender, TextChangedEventArgs e)
+    {
+      UsernamePlaceholder.Visibility = string.IsNullOrEmpty(UsernameBox.Text)
+          ? Visibility.Visible
+          : Visibility.Collapsed;
+    }
+
+    private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+    {
+      PasswordPlaceholder.Visibility = string.IsNullOrEmpty(PasswordBox.Password)
+          ? Visibility.Visible
+          : Visibility.Collapsed;
+    }
+
   }
 }

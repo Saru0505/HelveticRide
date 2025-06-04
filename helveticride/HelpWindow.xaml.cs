@@ -6,41 +6,35 @@ namespace helveticride
 {
   public partial class HelpWindow : Page
   {
-    private FeedbackDatabase _feedbackDb;
-
     public HelpWindow()
     {
       InitializeComponent();
-      _feedbackDb = new FeedbackDatabase();
     }
 
-    private void SendFeedback_Click(object sender, RoutedEventArgs e)
+    private void SubmitFeedback_Click(object sender, RoutedEventArgs e)
     {
-      string message = FeedbackBox.Text.Trim();
+      string subject = SubjectBox.Text.Trim();
+      string description = DescriptionBox.Text.Trim();
+      string email = EmailBox.Text.Trim();
 
-      if (string.IsNullOrWhiteSpace(message))
+      if (string.IsNullOrWhiteSpace(subject) || string.IsNullOrWhiteSpace(description))
       {
-        MessageBox.Show("Bitte gib eine Nachricht ein.");
+        MessageBox.Show("Bitte gib einen Betreff und eine Beschreibung ein.", "Unvollständig", MessageBoxButton.OK, MessageBoxImage.Warning);
         return;
       }
 
-      int userId = UserSession.CurrentUserId;
+      // Platzhalter für Datenbank oder Logging
+      MessageBox.Show("Vielen Dank für dein Feedback!", "Erfolgreich", MessageBoxButton.OK, MessageBoxImage.Information);
 
-      try
-      {
-        _feedbackDb.AddFeedback(userId, message);
-        MessageBox.Show("Vielen Dank für dein Feedback!");
-        FeedbackBox.Text = "";
-      }
-      catch (System.Exception ex)
-      {
-        MessageBox.Show("Fehler beim Speichern des Feedbacks:\n" + ex.Message);
-      }
+      // Eingaben leeren
+      SubjectBox.Clear();
+      DescriptionBox.Clear();
+      EmailBox.Clear();
     }
 
-    private void Back_Click(object sender, System.Windows.RoutedEventArgs e)
+    private void Back_Click(object sender, RoutedEventArgs e)
     {
-      NavigationService?.Navigate(new HomeWindow());
+      NavigationService?.GoBack(); // Geht zur vorherigen Seite zurück
     }
   }
 }
