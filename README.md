@@ -100,9 +100,3 @@ helveticride/
 
 ---
 
-
-## 📸 Platzhalter für Diagramme
-
-![ER-Modell](docs/er-modell.png)  
-![Relationales Modell](docs/relationales-modell.png)  
-![UML Klassendiagramm](docs/uml-klassendiagramm.png)
