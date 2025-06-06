@@ -123,3 +123,15 @@ helveticride/
 ![Relationales Modell](./images/RelationalesModell.png)
 
 ---
+
+## 📐 UML Diagramm 
+
+![UML Diagramm](./images/UML-HelveticRide.png)
+
+---
+
+## ⚙️ Programmablaufplan 
+
+
+
+---
