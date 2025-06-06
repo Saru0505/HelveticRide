@@ -4,6 +4,12 @@
 
 ---
 
+## 📺 Video zum Projekt auf Youtube 
+
+[![▶️ Video ansehen](https://img.youtube.com/vi/a01sl-0EDG8/0.jpg)](https://youtu.be/a01sl-0EDG8)
+
+---
+
 ## 📌 Projektübersicht
 
 - **Sprache:** C# (.NET)
@@ -41,21 +47,6 @@ Die Struktur wird automatisch beim Start anhand der Datei [`create_tables.sql`](
 ## 🧪 Beispielrouten importieren
 
 Optional kann die Datei [`sample_routes.sql`](sample_routes.sql) bereitgestellt werden. Diese Datei wird beim Start automatisch ausgeführt, sofern sie vorhanden ist.
-
----
-
-## 🖼️ Diagramme
-
-Die folgenden drei Grafiken müssen als Teil der Projektdokumentation erstellt und im Git-Repo abgelegt werden:
-
-1. **ER-Diagramm**  
-   
-
-2. **Relationales Modell**  
-  
-
-3. **UML-Klassendiagramm**  
-   
 
 ---
 
@@ -100,3 +91,35 @@ helveticride/
 
 ---
 
+## 🖊️ Mockup
+
+![Mockup](./images/HelveticRide-Mockup.png)
+
+---
+## 🖼️ Diagramme
+
+Die folgenden drei Grafiken müssen als Teil der Projektdokumentation erstellt und im Git-Repo abgelegt werden:
+
+1. 🧩 **ER-Diagramm**
+ 
+   ![ER-Modell](./images/ER-Modell.png)
+ 
+   
+
+2. 🗂️ **Relationales Modell**
+  
+   ![Relationales Modell](./images/RelationalesModell.png)
+
+  
+3. 📐 **UML-Klassendiagramm**
+   
+   ![UML Diagramm](./images/UML-HelveticRide.png)
+
+
+4. ⚙️ **Programmablaufplan**
+
+    ![Programmablaufplan](./images/Programmablaufplan-HelveticRide.png)
+
+
+   
+---
