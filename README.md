@@ -66,14 +66,18 @@ Stelle sicher, dass sich `create_tables.sql` im Output-Verzeichnis (`bin/Debug/.
 ```
 helveticride/
 │
-├── create_tables.sql
-├── sample_routes.sql         # Optional
-├── Database.cs               # Zentrale Datenbanklogik
-├── LoginWindow.xaml
-├── RegisterWindow.xaml
-├── MapPage.xaml
-├── RoutesWindow.xaml
+├── create_tables.sql              # Erstellt alle SQLite-Tabellen (Users, Routes)
+├── update_db.sql                  # Optionales Update-Script für spätere Änderungen
+├── insert_sample_data.sql         # Fügt Beispieldaten ein
+├── Database.cs                    # Zentrale Datenbanklogik (Singleton, CRUD)
+├── LoginWindow.xaml               # Login-Fenster (UI)
+├── LoginWindow.xaml.cs            # Login-Funktionalität
+├── RegisterWindow.xaml            # Registrierungs-Fenster (UI)
+├── RegisterWindow.xaml.cs         # Registrierung mit Validierung & Datenbankzugriff
+├── MapPage.xaml                   # Seite zur Routendarstellung
+├── RoutesWindow.xaml              # Übersicht gespeicherter Routen
 └── ...
+
 ```
 
 ---
