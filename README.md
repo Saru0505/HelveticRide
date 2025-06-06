@@ -101,22 +101,22 @@ helveticride/
 Die folgenden drei Grafiken müssen als Teil der Projektdokumentation erstellt und im Git-Repo abgelegt werden:
 
 1. 🧩 **ER-Diagramm**
-2. 
+ 
    ![ER-Modell](./images/ER-Modell.png)
  
    
 
-3. 🗂️ **Relationales Modell**
-4. 
+2. 🗂️ **Relationales Modell**
+  
    ![Relationales Modell](./images/RelationalesModell.png)
 
   
-5. 📐 **UML-Klassendiagramm**
+3. 📐 **UML-Klassendiagramm**
    
    ![UML Diagramm](./images/UML-HelveticRide.png)
 
 
-6. ⚙️ **Programmablaufplan**
+4. ⚙️ **Programmablaufplan**
 
    
 ---
