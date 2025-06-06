@@ -105,6 +105,21 @@ helveticride/
 | 322    | UI/UX & Validierung                 | ✅ WPF mit Eingabeprüfungen |
 
 ---
+
 ## 🖊️ Mockup
+
+![Mockup](./images/HelveticRide-Mockup.png)
+
 ---
 
+## 🧩 ER-Modell
+
+![ER-Modell](./images/ER-Modell.png)
+
+---
+
+## 🗂️ Relationales Modell
+
+![Relationales Modell](./images/RelationalesModell.png)
+
+---
