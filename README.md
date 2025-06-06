@@ -50,21 +50,6 @@ Optional kann die Datei [`sample_routes.sql`](sample_routes.sql) bereitgestellt 
 
 ---
 
-## 🖼️ Diagramme
-
-Die folgenden drei Grafiken müssen als Teil der Projektdokumentation erstellt und im Git-Repo abgelegt werden:
-
-1. **ER-Diagramm**  
-   
-
-2. **Relationales Modell**  
-  
-
-3. **UML-Klassendiagramm**  
-   
-
----
-
 ## 🧭 Programmstart
 
 ```bash
@@ -111,15 +96,27 @@ helveticride/
 ![Mockup](./images/HelveticRide-Mockup.png)
 
 ---
+## 🖼️ Diagramme
 
-## 🧩 ER-Modell
+Die folgenden drei Grafiken müssen als Teil der Projektdokumentation erstellt und im Git-Repo abgelegt werden:
 
-![ER-Modell](./images/ER-Modell.png)
+1. 🧩 **ER-Diagramm**
+ 
+   ![ER-Modell](./images/ER-Modell.png)
+ 
+   
 
----
+2. 🗂️ **Relationales Modell**
+  
+   ![Relationales Modell](./images/RelationalesModell.png)
 
-## 🗂️ Relationales Modell
+  
+3. 📐 **UML-Klassendiagramm**
+   
+   ![UML Diagramm](./images/UML-HelveticRide.png)
 
-![Relationales Modell](./images/RelationalesModell.png)
 
+4. ⚙️ **Programmablaufplan**
+
+   
 ---
